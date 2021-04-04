@@ -1,7 +1,9 @@
+package com.matcher;
+
 import java.util.concurrent.*;
 import java.util.regex.Pattern;
 
-class Matcher {
+public class Matcher {
 
     public static boolean matches(String text, String regex) {
         Callable<Boolean> matcher = (() -> Pattern.compile(regex).matcher(new UpgradedCharSequence(text)).matches());
